@@ -24,7 +24,9 @@ The basic structure of a web-page is as follows:
 `<!DOCTYPE html>` tells the browser that the file is an HTML5 web page.
 
 The entire webpage need to be *wrapped* in `<html>` tags. 
+
     `<html>`: opening tag
+
     `</html>`: closing tag
 
 Inside the element `<html>` there are **two elements**: `<head>` and `<body>`. The head contains the metadata and the *visible* content is inside the body. 
