@@ -4,8 +4,8 @@
 - [Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML)
 
 ## Structure of a web page: HTML Elements
-[Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element)
-First Project: [basic web pages](./basic-web-pages/basics.html)
+- [Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element)
+- First Project: [basic web pages](./basic-web-pages/basics.html)
 
 The basic structure of a web-page is as follows:
 
