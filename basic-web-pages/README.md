@@ -97,7 +97,7 @@ The syntax to add an href to an anchor is:
 <a href="page.html">Link</a>
 ```
 
->> Reminder: content goes between the tags, attributes go inside the opening tag.
+> Reminder: content goes between the tags, attributes go inside the opening tag.
 
 <h4>Links</h4>
 
@@ -113,3 +113,46 @@ There are three types of links:
     * syntax: `<a href="/">Home page</a>`
     * The `/` represents the root of the webpage.
 
+Another attribute for anchors is the `target`. This attribute defines *where* to display the page when the user clicks it (in the same page or in a new windows/tab).
+
+The attributes are separeated by a space only.
+
+```html
+<a  href="https://developer.mozilla.org/EN-US/docs/web/html"
+    target="_blank"> Mozilla Developer Network
+</a>
+```
+
+<h4> Images </h4>
+
+They use the same way of linking as explained before and the element that cotains them is `<img/>`. The attribute that points to file is `src`.
+
+> Observation: it is an empty element.
+
+The syntax is 
+
+```html
+<img src="some-phot.jpg"/>
+```
+
+The supported formats are:
+
+- jpg: used to handle large color palettes without big file size. They don't allow for transparent pixels.
+- gif: used for simple animations, not good for large color palettes. Transparent pixels are binary (no opacity option).
+- png: good for icons, technical diagrams, logos, etc. They allow transparent pixels and opacity.
+- svg: they are a vector-based graphics format. They can be scaled to *any* dimension without loss of quality.
+
+`<width>` is the attribute to edit the image size. The syntax is:
+
+```html
+<img src="some-photo.jpg"
+     width="75"/>
+```
+
+The width is specified in pixels.
+
+`<height>` is another attribute to edit the image size.
+
+Nevertheless, it is usually better to set image dimensions with CSS.
+
+`<alt>` is an attribute that defines the alternative text to the image that sould be displayed.
