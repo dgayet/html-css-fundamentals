@@ -82,6 +82,7 @@ HTML Condensed consecutive spaces, tabs, or new lines as a **single space**.
 `<hr/>`: This adds a horizontal rule, represents a thematic brak. By default it renders as a straight horizontal line.
 
 ### Images and Links
+Webpages: [links](./links-and-images/images.html), [images](./links-and-images/images.html) and [extras](./links-and-images/misc/extras.html)
 These elements deal with *external resources*.
 
 - Links point the use to a different HTML document.
@@ -156,3 +157,20 @@ The width is specified in pixels.
 Nevertheless, it is usually better to set image dimensions with CSS.
 
 `<alt>` is an attribute that defines the alternative text to the image that sould be displayed.
+
+### Reserverd Characters
+[Entities](https://html.spec.whatwg.org/multipage/named-characters.html)
+
+For example `<>`, or &, are reserver characters and in order to display them we need to use Entities.
+
+Entities examples: `&amp; &lt; &gt;`.
+
+Entities begin with ampersand and end with semicolon.
+
+### Quotes
+There are four different kinds of curly quotes:
+
+- `&ldquo;`: left double quote
+- `&rdquo;`: right double quote
+- `&lsquo;`: left single quote
+- `&rsquo;`: right single quote
