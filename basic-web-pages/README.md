@@ -5,7 +5,7 @@
 
 ## Structure of a web page: HTML Elements
 - [Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element)
-- First Project: [basic web pages](./basics.html)
+- First webpage: [basics.html](./basics.html)
 
 The basic structure of a web-page is as follows:
 
@@ -86,3 +86,30 @@ These elements deal with *external resources*.
 
 - Links point the use to a different HTML document.
 - Images pull another resource into the page.
+
+`<a>`: These are called anchors. This element is used to create a link.
+
+HTML elements have attributes, and the attribute that refers to the link that an anchor has is the `href`. 
+
+The syntax to add an href to an anchor is: 
+
+```html
+<a href="page.html">Link</a>
+```
+
+>> Reminder: content goes between the tags, attributes go inside the opening tag.
+
+<h4>Links</h4>
+
+There are three types of links:
+
+- Absolute links: the most detailed way to refer to a web resource.
+    * The "syntax" is: "scheme" + "domain" + "path"
+    * Example: https://developer.mozilla.org/EN-US/docs/web/html
+
+- Relative links: refers to another file from the point of the file one is editing. The only thing one need to supply is the "path".
+
+- Root Relative links: insted of being relative to the *current page* they are relative to the *root* of the entire website. 
+    * syntax: `<a href="/">Home page</a>`
+    * The `/` represents the root of the webpage.
+
