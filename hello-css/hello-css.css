@@ -1,0 +1,28 @@
+body {
+    color: #6a3a63; /* dark pink */
+    background-color:  #c9a5c4; /* soft pink */
+    font-size: 18px
+}
+
+h1 {
+    color: #551e4d;
+    font-size: 3em;
+}
+
+h2 {
+    color:#552b4e;
+    font-size: 1.6em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Helvetica", "Arial", sans-serif;
+    text-align: center;
+}
+
+ul {
+    list-style-type: circle;
+}
+
+ol {
+    list-style-type: lower-roman;
+}

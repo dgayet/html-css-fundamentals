@@ -1,4 +1,4 @@
-# HTML and CSS fundamentals
+# HTML fundamentals
 
 - [Tutorial followed](internetingishard.com/html-and-css/introduction/)
 - [Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML)
