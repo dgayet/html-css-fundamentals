@@ -75,8 +75,14 @@ They are not called *italics* and **bold** because they are concerned with the s
 
 Some elements are "empty" or "self closing", such as line breaks and horizontal rules.
 
-HTML Condensed consecutive spaces, tabs, or new lineas as a **single space**. 
+HTML Condensed consecutive spaces, tabs, or new lines as a **single space**. 
 
 `<br/>`:  This adds a hard line break
 
 `<hr/>`: This adds a horizontal rule, represents a thematic brak. By default it renders as a straight horizontal line.
+
+### Images and Links
+These elements deal with *external resources*.
+
+- Links point the use to a different HTML document.
+- Images pull another resource into the page.
