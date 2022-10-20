@@ -1,7 +1,7 @@
 # CSS Fundamentals
 
 - [Tutorial followed](https://www.internetingishard.com/html-and-css/hello-css/)
-- [Documentation]()
+- [Documentation](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference)
 
 ## Presentation of a webpage: CSS Stylesheets
 - [Example](./hello-css.css)
@@ -82,3 +82,124 @@ The CSS hierarchy for every web page looks like this:
 - Inline styles (that could be us, but it never should be)
 
 This is ordered from least to most precedence, which means styles defined in each subsequent step override previous ones.
+
+### Page-specific styles
+
+`<style>`: element that is used to add page-specific CSS rules to individual HTML documents. They are added in the head of the file.
+
+Adding this element to an HTML file will override the equivalent rule in the stylesheet linked to it. 
+
+### Inline styles
+These are the most specific ways to define CSS. They are added as an attribute to an element and they override any other style applied to them.
+
+Syntax example:
+
+```html
+    <p> This is a dead link, let's cross it: 
+        <a href="nowhere.html" style= 'color: #990000; text-decoration: line-through;'>
+            obsolete link</a> </p>
+```
+
+### Multiple stylesheets
+
+Several CSS Stylesheets can be applied to the same file using multiple `<link/>` elements on the same page. 
+
+> Observation: The order in which they are added matter: stylesheets that come later will override styles in earlier ones.
+
+## The CSS Box Model
+- [Example](./css-box-model/box-styles.css)
+- [Webpage](./css-box-model/boxes.html)
+
+The CSS box model is a set of rules that determine the dimensions of every element in a web-page. Each HTML element rendered on the screen is a box, and they come in two flavors: "block" boxes and "inline" boxes.
+
+Paragraphs, headings, etc, are block boxes, and emphasis and strong are inline boxes. However, one can change the behavior of a box changing the `display` property to `block` in the CSS stylesheet.
+
+### Content, Padding, Border and Margin
+
+This model gives each box four major properties:
+
+- **Content**: The text, image or other media content in the element.
+- **Padding**: The space between the box's content and its border.
+- **Border**: The line between the box's padding and margin
+- **Margin**: The space between the box and surrrounding boxes. 
+
+<h4> Padding </h4>
+
+The property for padding is `padding`, and defines the padding for the selected element. The `background-color` is applied to everything inside the **border** so the padding added to an elements gets colored too.
+
+<h4> Border </h4>
+Outside the padding is the border, and the syntax to style is the following:
+
+`border: size style color`.
+
+The border adds a line around the padding.
+
+The are variations to the `border` property to choose which side it applies to. `border-top`, `border-bottom` and so on.
+
+> Borders are usually used to debug, they help you see how a certain box is rendered.
+
+<h4> Margins </h4>
+
+Margins define the space *outside* of an element's border, space between the box and its surrounding boxes. The property is called `margin` and like borders you can choose specific sides.
+
+The main differences between padding and margins are:
+
+- Margins *always* have transparent backgrounds
+- Padding is included in the click of an element, margins are not.
+- Margins collapse vertically.
+
+> Block and inline elements handle margins differently. Inline boxes *completely ignore* **top** and **bottom** margins of an element. Also, the padding in inline boxes is added to every side, but they don't the vertical layout of surrunding boxes.
+
+<h5> Vertical margin collapse </h5>
+
+When there is an element with bottom margin sitting on top of another element with top margin, only the biggest is displayed. The bigger one abosrbs the other margin.
+
+To prevent this from happening, and invisible element should be put in between them, for example:
+
+```html
+<p> Paragraph paragraph </p>
+
+<div style='padding-top: 1px;'></div> <!-- invisible element -->
+
+<p> Another paragraph </p>
+```
+
+> Only *consecutive* elements can collapse into each other.
+
+### Generic Boxes
+There are HTML boxes used *purely* for the sake of styling a web page. These are: `<div>` and `<span>`.
+
+They are container elements but they don't have any effect on the semantic structure of and HTML document.
+
+`<div>` are block-level and `<span>` are inline elements.
+
+### Explicit Dimensions
+
+The properties `width` and `height` are used to explicitly define the size of a box. They override the default size of a box's content.
+
+
+### Content Boxes and Border Boxes
+
+`width` and `height` define the size of a box's *content*. The padding and border is added on top of it. One can define the size of the box (content+padding+border) with the property `width` by setting the property `box-sizing` to `border-box`. In this case the content box width is determined automatically.
+
+### Box Alignment
+
+One of the ways of aligning the *box* (not the content) is setting left side of the `margin` property to `auto`. 
+
+>Obs: this only work with elements that have explicit width, otherwise they take the whole width of the browser.
+
+
+### Resetting styles
+Different browsers have different default styles for all of their HTML elements.
+
+The universal CSS selector (*) lets you override default styles, like this:
+
+```cs
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+```
+
+## CSS Selector
