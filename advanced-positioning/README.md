@@ -4,6 +4,8 @@ The are four types of positioning: `css`, `relative`, `absolute` and `fixed`.
 > The vast majority of elements on a web page should be laid out according to the static flow of the page. These other positioning schemes come into play when you want to do more advanced things like tweak the position of a particular element or animate a UI component without messing up the surrounding elements.
 
 ## Positioned Elements
+- [Example](styles.css)
+- [Web page](schemes.html)
 
 The CSS `position` property handles the positioning scheme of a particular element. Its default value is `static`. If it doesn't have this value, it is refered to as a *positioned element*.
 
@@ -50,7 +52,10 @@ The difference is that fixed elements *don't scroll* with the rest of the page.
 
 These advanced positioning schemes allow JavaScript to move elements around while avoiding any kind of interaction with surrounding elements.
 
-### Positioned Elements for Menus
+## Positioned Elements for Menus
+[Example](menu.css)
+[Web page](menu.html)
 
+### Inline Menu Items
 
 

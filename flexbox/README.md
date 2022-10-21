@@ -1,7 +1,7 @@
 # Flexible Box
 [Documentation]()
-[Example]()
-[Web page]()
+[Example](styles.css)
+[Web page](flexbox.html)
 
 ## Introduction
 
