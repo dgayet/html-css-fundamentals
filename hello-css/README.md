@@ -202,4 +202,187 @@ The universal CSS selector (*) lets you override default styles, like this:
 }
 ```
 
-## CSS Selector
+## CSS Selectors
+
+"Class selectros" let you apply CSS styles to a specific HTML element. They let you defferentiate between HTML elements of the same type.
+
+The requirements to do this are:
+
+- A `class` attribute on the HTML element in question.
+- A matching CSS class selector in the stylesheet.
+
+The syntax to apply the rules to a class is:
+
+```css
+    .class-name {
+        /* rule */
+    }
+```
+
+
+### Container divs
+
+Multiple elements in a page can be wrapped around `<div>` tags to style them all at once.
+
+This is how layouts are defined in more complex web pages. 
+
+### Reusing and modifying class styles
+
+- Classes can be reused to use in multiple elements and style them all at once.
+- The *same* element can have *multiple* classes too, to alter one element in a class without altering another.
+
+The syntax to have multiple class in one element is:
+
+```html
+    <div class='button call-to-action'>Button two</div>
+```
+
+The precedence is given by the order in the **CSS stylesheet** and not the order in the **HTML file** class attribute.
+
+### Descendant Selectors
+
+Descendant selectors let you target only those elements that are *inside* of another element. The syntaxis is:
+
+```css
+.class-name sub-class-name {
+    /* attributes */
+}
+```
+
+> Related: [child selectors](https://developer.mozilla.org/en-US/docs/Web/CSS/Child_selectors)
+
+### Pseudo-classes for links
+CSS pseudo-classes provide a mechanism for hooking into "the temporary user information" and styling the state of an element.
+
+<h4>Basic link styles</h4>
+
+The most common link pseudo-classes are as follows:
+
+- :link - a link the user has never visited
+- :visited - a link the user has visited before.
+- :hover - a link with the user's mouse over it.
+- :active - a link that's being pressed down.
+
+The syntax to style it is:
+
+```css
+a:hover {
+    color: aqua;
+}
+
+a:hover:visited {
+    color orange;
+}
+```
+
+### Pseudo-classes for buttons
+[Documentation](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes)
+
+Pseudo-classes can be applied to any kind of selector (not just type selector). 
+
+`last-of-type`: lets you select the final element of a particular type in its parent element. 
+`first-of-type`: it's the same but with the first element.
+
+> Obs: these pseudo-classes apply to EVERY container element.
+
+To select only one container, we could do:
+
+```css
+    .container > element:first-of-type {
+        /* properties */
+    }
+```
+
+## ID Selectors
+
+ID Selectors work in pretty much the same wasy as CSS Selectors, but only *one* element can have the same ID per page, they can't be reused. 
+
+The attribute in the HTML page is `id="id-name"` and to refer to them in a CSS stylesheet we use:
+
+```css
+    #id-name {
+        /* properties */
+    }
+```
+
+This practice is hard to maintain, so it's usually frowned-upon.
+
+> `id` attributes need to be unique because they serve as the target for “URL fragments”.
+
+
+## CSS Specificity
+
+“CSS specificity” is the weight given to different categories of selectors. This means that certain selectors will always override other ones, regardless of where they appear in the stylesheet.
+
+For example: ID selectors have higher specificity than class selectors.
+
+The speciificity goes as follows:
+
+- `#id`
+- `.class:pseudo-class`
+- `basic-element:pseudo-class` and `.class sub-class`
+- `.class`
+- `basic-element`
+
+## Floats
+[Example](./floats/styles.css)
+[Web page](./floats/floats.html)
+
+Floats let you put block-level element side-by-side instead of on top of each other.
+
+> Float-based layouts have mostly been replaced with Flexbox in modern websites.
+
+The `float` property handles the control over the *horizontal* position of an element.
+
+The most common values are:
+
+- `left`: this leaves the container to the left and lets the next container surround it.
+- `right`: same but leaves the container to the right.
+- `none`: default.
+
+Summary:
+
+To align block boxes we have these options:
+
+- to the left: `float: left`
+- center: `margin: 0 auto`
+- to the right: `float: right`
+
+> Child boxes float arount their parents.
+
+With the use of multiple containers (`<div>`) inside other containers are how complex webpages are built.
+
+When *multiple elements* are float in the *same direction*, they'll stack horizontally.
+
+### Clearing Floats
+
+“Clearing” a float is when we tell a block to ignore any floats that appear before it. Instead of flowing around the floated box, a cleared element always appears after any floats.
+
+The property is called `clear` and it can take three values: `both`, `left`, `right`.
+
+Clearing floats only fixes the height issue when there’s an element inside the container element that we can add a clear property to. 
+
+To resolve an issue of zero-height a container with only floated elements, one can use the `overflow` property.
+
+`overflow: hidden` recognizes the height of any floated element inside a container.
+
+
+### Floats for Equal-Width Columns
+
+Floats can be used to create multi-column layouts. 
+
+Percentages in CSS are relative to the width of the parent element, they can be applied to columns to take-up a percentage of the parten container.
+
+
+<h4> Floats for Grids </h4>
+
+When there isn't enough room to stack a floated element horizontally, it pops down to the next line, forming a grid.
+
+<h4> Floats for Content </h4>
+
+The other aspect of layouts is styling the individual HTML components that go inside this overarching page structure.
+
+<h4> Hiding Overflow (for content) </h4>
+
+Adding `overflow: hidden` to a content element will make sure the element is 'horizontally cleared', in the meaming of that instead of floating it left (which could make it go underneath of another element if it didn't fit), it explicitly leaves it to the left (adjusting the width).
+

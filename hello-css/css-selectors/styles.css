@@ -1,0 +1,104 @@
+* {
+    margin-bottom: 5px;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.synopsis {
+    color: #dbaed2;
+    font-style:italic;
+}
+
+.synopsis em {
+    font-style: normal;
+}
+
+.call-to-action {
+    font-style: italic;
+    background-color: #cf8151;
+}
+
+.button:link, .button:visited {
+    display: block;
+    text-decoration: none;
+
+    color: #FFF;
+    background-color: #79456f;
+    font-weight: bold;
+    padding: 10px 5px 10px 5px;
+    text-align: center;
+    border: 2px solid #923180;
+    border-radius: 2px;
+
+    width: 150px;
+    margin: 20px auto;
+}
+
+.button:hover, .button:visited:hover {
+    color: #FFF;
+    background-color: #ab77a1; 
+}
+
+.button:active {
+    color: #fff;
+    background-color: #702362;
+}
+
+.page {
+    width: 600px;
+    margin: 0 auto;
+}
+
+a:link {
+    color: blue;
+    text-decoration: none;
+}
+
+a:visited {
+    color: purple;
+}
+
+a:visited:hover {
+    color: orange;
+}
+
+a:hover {
+    color: aqua;
+    text-decoration: underline;
+}
+
+a:active {
+    color: red; 
+}
+
+a:visited:active {
+    color: red; 
+}
+
+.call-to-action:link,
+.call-to-action:visited {
+  font-style: italic;
+  background-color: #EEB75A;     /* Yellow */
+}
+
+.call-to-action:hover,
+.call-to-action:visited:hover {
+  background-color: #F5CF8E;     /* Light yellow */
+}
+
+.call-to-action:active,
+.call-to-action:visited:active {
+  background-color: #EEB75A;     /* Yellow */
+}
+
+p:last-of-type {
+    margin-bottom: 50px;
+}
+
+p:first-of-type {
+    margin-bottom: 50px;
+}
+
+#button-2 {
+    color: #5D6063;
+}
