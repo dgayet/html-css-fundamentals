@@ -3,5 +3,8 @@
 
 This is the repository for HTML and CSS toy projects.
 
+## Index
 
-Inside [basic-web-pages](./basic-web-pages/) there is a HTML and CSS basic tutorial and first projects to get to know the languages. 
+1. [Basic web pages](./basic-web-pages/README.md)
+2. [Hello CSS](./hello-css/README.md)
+3. [Flexbox](./flexbox/README.md)
